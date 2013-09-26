@@ -100,7 +100,7 @@ eval_command() {
 # Main
 ##############################################################################
 if [ "$1" = -h -o "$1" = -help -o "$1" = --help ]; then
-  echo "Usage:  `basename $0`"
+  echo "Usage:  `basename $0` [-h|-help|--help]"
   echo "$how_to_manage_changes"
   exit 0
 fi

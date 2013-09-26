@@ -97,12 +97,14 @@ git checkout ... # Checkout the desired release
 
 # Edit bin/overlayPrep.sh for your environment if applicable.
 
-# Run the script
-mkdir -p $HOME/backup/overlay
+# Prepare for running the script
+mkdir -p ~/backup/overlay
 bin/overlayPrep.sh -h
+
+# Run the script
 bin/overlayPrep.sh
 
-# Check results at $HOME/backup/overlay
+# Check results at ~/backup/overlay
 
 # Celebrate!
 
