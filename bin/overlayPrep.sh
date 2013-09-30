@@ -1,5 +1,5 @@
 #!/bin/sh
-# Usage:  overlayPrep.sh
+# Usage:  overlayPrep.sh [-h|-help|--help]
 #
 # Copyright (c) 2013, Flinders University, South Australia. All rights reserved.
 # Contributors: eResearch@Flinders, Library, Information Services, Flinders University.
