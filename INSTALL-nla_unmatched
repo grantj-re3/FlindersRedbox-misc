@@ -1,0 +1,69 @@
+1. APPLICATION ENVIRONMENT
+
+See INSTALL-overlayPrep.
+
+
+2. INSTALLATION
+
+See INSTALL-overlayPrep.
+
+
+3. EXAMPLES
+
+
+3.1 EXAMPLE INVOCATIONS
+
+Command line invocation.
+  ./nla_unmatched.sh
+
+
+Cron tab invocation.
+  # Run Monday-Friday at 8:10am local time.
+  10 8 * * 1-5 $HOME/opt/misc/bin/nla_unmatched.sh
+
+3.2 SAMPLE INSTALLATION
+
+The purpose of this sample is to demonstrate usage.
+
+
+Scenario:
+
+ - The application is to be installed in $HOME/opt/misc of an unprivileged user.
+ - The filesystem path to your Mint main log is:
+     /opt/ands/mint-builds/current/home/logs/main.log
+ - You want to monitor unmatched NLA IDs listed during the 8:00am Mint
+   housekeeping job. That is, target_time is 8:00am. Hence, you can only expect
+   valid results if the nla_unmatched.sh script is run *after* this time each day.
+ - You want NLA ID unmatched notification emails to be sent to:
+   * me@example.com, and
+   * you@example.com
+ - Your Mint person records can be access via URL
+   https://MY_SERVER.example.com/mint/default/detail/OBJECT_ID/, that is:
+   * prefix of OBJECT_ID is 'https://MY_SERVER.example.com/mint/default/detail/'
+   * suffix of OBJECT_ID is '/'
+
+Instructions:
+
+mkdir ~/opt
+git clone https://github.com/grantj-re3/FlindersRedbox-misc.git ~/opt/misc
+cd ~/opt/misc
+
+# If you want a particular version
+git tag # List tagged releases
+git checkout ... # Checkout the desired release
+
+# Read files INSTALL* LICENSE README*
+
+# Edit bin/nla_unmatched.sh for your environment if applicable.
+
+# Run the script
+bin/nla_unmatched.sh
+
+# Check results in your email inbox.
+
+# If successful, install the script into your crontab and test again.
+# Note that for the default target_time of 8:00am, the cron job must
+# be scheduled to run after 8:00am.
+
+# Celebrate!
+

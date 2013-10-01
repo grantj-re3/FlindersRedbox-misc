@@ -24,10 +24,12 @@ Read the INSTALL file.
 
 Features
 --------
-* overlayPrep.sh will perform backups of ReDBox-Mint config/script
-  institutional build changes *provided* it is managed according to the rules
+* overlayPrep.sh will perform backups of ReDBox-Mint institutional build
+  config/script _changes_ __provided__ it is managed according to the rules
   and guidelines specified (by running "overlayPrep.sh -h")
-  
+* nla_unmatched.sh will extract from Mint logs any person objects which are
+  awaiting an NLA ID and send a list of the corresponding Mint record URLs
+  to the specified email address.
 
 Todo
 ----
