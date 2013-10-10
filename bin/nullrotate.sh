@@ -241,13 +241,15 @@ do_command() {
 get_cli_option $@
 if [ "$copt_is_verbose" = 1 ]; then
   cat <<-EOM_VARS
-	DIR          = '$copt_dir'
-	PATH_REGEX   = '$copt_pathre'
-	Keep files   = '$copt_keep_nfiles'
-	Keep days    = '$copt_keep_ndays'
-	Action cmd   = '$action_cmd MATCHING_PATH'
-	TEST/DRY RUN = '$copt_is_test'
-	Verbose      = '$copt_is_verbose'
+
+	ACTION:       '$copt_action'
+	DIR:          '$copt_dir'
+	PATH_REGEX:   '$copt_pathre'
+	Keep files:   '$copt_keep_nfiles'
+	Keep days:    '$copt_keep_ndays'
+	Action cmd:   '$action_cmd MATCHING_PATH'
+	Verbose:      '$copt_is_verbose'
+	TEST/DRY RUN: '$copt_is_test'
 
 	EOM_VARS
 fi
