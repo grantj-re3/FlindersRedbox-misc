@@ -11,7 +11,7 @@
 #   within a cron job.
 #
 # EXAMPLE CRON USAGE
-#   25  7 * * 1   (echo "###START `date +\%Y-\%m-\%d\\ \%H:\%M:\%S`"; $HOME/opt/misc/bin/nullrotate_wrap.sh) >> $HOME/opt/url2ingest/log/nullrotate_wrap.log 2>&1
+#   25  7 * * 1   $HOME/opt/misc/bin/nullrotate_wrap.sh >/dev/null
 #
 ##############################################################################
 PATH=/bin:/usr/bin:/usr/local/bin:$HOME/opt/misc/bin;  export PATH
