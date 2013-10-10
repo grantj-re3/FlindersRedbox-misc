@@ -14,7 +14,7 @@
 #   25  7 * * 1   (echo "###START `date +\%Y-\%m-\%d\\ \%H:\%M:\%S`"; $HOME/opt/misc/bin/nullrotate_wrap.sh) >> $HOME/opt/url2ingest/log/nullrotate_wrap.log 2>&1
 #
 ##############################################################################
-PATH=/bin:/usr/bin:/usr/local/bin:$HOME/opt/misc/bin  export PATH
+PATH=/bin:/usr/bin:/usr/local/bin:$HOME/opt/misc/bin;  export PATH
 HISTDIR=/opt/home/MYHOME/opt/url2ingest/download/history
 
 KEEP_NUM_FILES=1
