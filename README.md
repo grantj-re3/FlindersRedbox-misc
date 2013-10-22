@@ -30,6 +30,13 @@ Features
 * nla_unmatched.sh will extract from Mint logs any person objects which are
   awaiting an NLA ID and send a list of the corresponding Mint record URLs
   to the specified email address.
+* nullrotate.sh zips or deletes files whose filename matches a particular
+  regular expression (regex). It was developed to provide some flexibility
+  in zipping or deleting data files which had already been "rotated" (ie.
+  had a datestamp or timestamp applied) but which logrotate could not
+  adequately handle.
+* nullrotate_wrap.sh is a wrapper script to perform all zipping/deleting
+  using nullrotate.sh within a cron job.
 
 Todo
 ----
