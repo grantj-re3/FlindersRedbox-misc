@@ -23,6 +23,8 @@ email_subject="Mint notification: List of NLA records awaiting matching in TIM"
 url_prefix=https://MY_SERVER.example.com/mint/default/detail/
 url_suffix=/
 
+tim_url=https://www.nla.gov.au/tim/app
+
 ##############################################################################
 # Extract any Mint person objects which are awaiting an NLA ID
 obj_list=`egrep "^$datestamp $target_time.*does not yet have a national Identity in NLA" $mint_log |
@@ -43,7 +45,7 @@ obj_list=`egrep "^$datestamp $target_time.*does not yet have a national Identity
 
 	cat <<-EOMSG
 
-		This means that either the records awaiting publication have not yet been harvested by NLA Trove or they are awaiting someone at this institution to match them using the Trove Identities Manager (TIM).
+		This means that either the records awaiting publication have not yet been harvested by NLA Trove or they are awaiting someone at this institution to match them using the Trove Identities Manager (TIM) at $tim_url.
 
 		-----
 		This is an automatic email. Please do not reply
