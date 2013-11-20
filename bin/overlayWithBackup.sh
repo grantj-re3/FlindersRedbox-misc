@@ -117,6 +117,8 @@ askUserContinueOrExit() {
   while [ "$userAnswer" != y -a "$userAnswer" != n ]; do
     cat <<-EOM_ASK
 
+	BEWARE: This script will extract and overwrite files. Use with CAUTION!
+
 	Ensure that you do NOT overlay ReDBox files into a Mint directory or vice versa.
 	The current directory is:                `pwd`
 	Files to extract are listed in:          $fnameList
