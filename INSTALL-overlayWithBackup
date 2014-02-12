@@ -83,14 +83,47 @@ Instructions:
 # Notes:
 # - If any of the (selected) files from the tarball is a
 #   symlink, after running overlayWithBackup.sh the target file
-#   in the filesystem will also be a symlink.
+#   in the filesystem will also be a symlink. This property results
+#   from the normal behaviour of (GNU) tar.
 #
 # - If any of the (selected) target files in the filesystem is a symlink,
 #   after running overlayWithBackup.sh the target file will have been
 #   replaced with the file (symlink or not) from the tarball (and the
-#   original symlink-target will not be affected).
+#   original symlink-target will not be affected). This property results
+#   from the normal behaviour of (GNU) tar.
 #
-# These properties result from the normal behaviour of (GNU) tar.
+# - Files listed in BASEPATH.renamed need to be managed manually.
+#   These represent files which (instead of deleting) have been renamed
+#   from ORIG to ORIG.dist in order for overlayPrep.sh to track the
+#   intention to delete the ORIG file.
+#
+# - If you have renamed the original file (and the .dist version
+#   reflects that renaming) then this program may not deal with the
+#   situation in the way you intended hence you may have to
+#   overlay/reinstate the file manually. Eg.  Say you wish to
+#   replace foo-1.1.jar with foo-1.2.jar but:
+#   * you wish to keep a backup of foo-1.1.jar (in addition to foo-1.2.jar)
+#   * you must not keep foo-1.1.jar in your library directory because
+#     having both may result in unexpected side effects
+#
+#   then you might achieve that result as follows.
+#   * Keep a copy of old jar; ensure extension is not jar otherwise java
+#     app will attempt to load it; ensure overlayPrep.sh will back it up.
+#       mv -vi foo-1.1.jar foo-1.1.jar.hasBug12345
+#       touch foo-1.1.jar.hasBug12345.dist
+#   * Get a copy of the new jar; ensure overlayPrep.sh will back it up.
+#       cp -vip /download/dir/foo-1.2.jar .
+#       touch foo-1.2.jar.dist
+#
+#   However, running overlayWithBackup.sh would result in:
+#   * foo-1.2.jar being correctly reinstated
+#   * the backup foo-1.1.jar.hasBug12345 being correctly reinstated
+#   * but if file foo-1.1.jar already exists in the filesystem, it
+#     will not be renamed/moved so the java app will load both
+#     foo-1.2.jar and foo-1.1.jar
+#
+#   Hence you should manage such scenarios manually.
+
 
 # 8) Celebrate!
 
