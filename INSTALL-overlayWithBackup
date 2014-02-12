@@ -74,9 +74,23 @@ Instructions:
 
 #    If all the info looks ok, press 'y' then Enter
 
-# Note: If the any of the files to be replaced from the tarball is a
-#       symlink, after running overlayWithBackup.sh the destination
-#       will also be a symlink.
+# Terms used:
+# - "Target file" below means a file in the filesystem (not in the
+#   tarball) listed in BASEPATH.list.x.
+#
+# - "Symlink-target" below means a file/dir pointed to by a symlink.
+#
+# Notes:
+# - If any of the (selected) files from the tarball is a
+#   symlink, after running overlayWithBackup.sh the target file
+#   in the filesystem will also be a symlink.
+#
+# - If any of the (selected) target files in the filesystem is a symlink,
+#   after running overlayWithBackup.sh the target file will have been
+#   replaced with the file (symlink or not) from the tarball (and the
+#   original symlink-target will not be affected).
+#
+# These properties result from the normal behaviour of (GNU) tar.
 
 # 8) Celebrate!
 
