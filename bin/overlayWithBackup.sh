@@ -233,6 +233,8 @@ backupListedFilesDirs "$fnameList"
 
 echo
 echo "Overlay with files from tarball (if present within $EXTRACT_LIST_SUFFIX file)"
+# Loop below has similar functionality to the gnu-tar -T option. ie.
+#   tar $TAR_EXTRACT_ARGS "$fnameArchive" -T $fnameList
 cat $fnameList |while read relPath; do
   cmd="tar $TAR_EXTRACT_ARGS \"$fnameArchive\" \"$relPath\""
   doCmd "$cmd" "\nExtract & overlay some files from tarball"
