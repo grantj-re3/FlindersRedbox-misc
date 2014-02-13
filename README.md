@@ -24,20 +24,20 @@ Read the INSTALL file.
 
 Features
 --------
-* _nla_unmatched.sh_ will extract from Mint logs any person objects which are
+* *nla_unmatched.sh* will extract from Mint logs any person objects which are
   awaiting an NLA ID and send a list of the corresponding Mint record URLs
   to the specified email address.
-* _nullrotate.sh_ zips or deletes files whose filename matches a particular
+* *nullrotate.sh* zips or deletes files whose filename matches a particular
   regular expression (regex). It was developed to provide some flexibility
   in zipping or deleting data files which had already been "rotated" (ie.
   had a datestamp or timestamp applied) but which logrotate could not
   adequately handle.
-* _nullrotate_wrap.sh_ is a wrapper script to perform all zipping/deleting
+* *nullrotate_wrap.sh* is a wrapper script to perform all zipping/deleting
   using nullrotate.sh within a cron job.
-* _overlayPrep.sh_ will perform backups of ReDBox-Mint institutional build
+* *overlayPrep.sh* will perform backups of ReDBox-Mint institutional build
   config/script _changes_ __provided__ it is managed according to the rules
   and guidelines specified (by running "overlayPrep.sh -h")
-* _overlayWithBackup.sh_ will extract/overlay files into a ReDBox or Mint
+* *overlayWithBackup.sh* will extract/overlay files into a ReDBox or Mint
   filesystem area from files backed up by overlayPrep.sh.
 
 Todo
