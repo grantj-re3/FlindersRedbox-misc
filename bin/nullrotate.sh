@@ -42,7 +42,7 @@ LC_ALL=C;  export LC_ALL  # Set a POSIX locale for sort
 APP=`basename $0`
 
 # GNU find command supports the -maxdepth switch which limits the number of
-# directory levels to which find will decend. If your find command does not
+# directory levels to which find will descend. If your find command does not
 # support this switch then it is recommended that the user achieve the same
 # effect by specifying the PATH_REGEX more strictly (ie. apply the regex to
 # the absolute path).
