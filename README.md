@@ -24,6 +24,7 @@ Read the INSTALL file.
 
 Features
 --------
+* *json_parse.sh* parses a JSON file (on RHEL).
 * *nla_unmatched.sh* will extract from Mint logs any person objects which are
   awaiting an NLA ID and send a list of the corresponding Mint record URLs
   to the specified email address.
