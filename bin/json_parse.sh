@@ -8,6 +8,8 @@
 #
 # PURPOSE
 #   Parse a JSON file (on Red Hat Enterprise Linux Server release 6).
+#   Alternatively, add a syntax highlighter to your favourite editor.
+#   Eg. https://github.com/elzr/vim-json for the vim editor.
 #
 ##############################################################################
 # usage_exit(error_code, error_msg="")
