@@ -11,6 +11,7 @@
 # - Optionally filter by National Library of Australia (NLA) harvester
 #   or Research Data Australia (RDA) harvester.
 # - Optionally filter by redbox or mint source URL.
+# - Optionally filter by OAI-PMH metadata prefix (RIF-CS or EAC-CPF)
 # - Optionally limit output to the most recent N lines of the log.
 #
 # See https://www.openarchives.org/OAI/openarchivesprotocol.html
