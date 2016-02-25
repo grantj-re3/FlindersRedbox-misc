@@ -26,6 +26,7 @@ Features
 --------
 * *grep_oai.sh* greps web-server logs for ReDBox or Mint OAI-PMH requests.
 * *json_parse.sh* parses a JSON file (on RHEL).
+* *nla_harvest_chk.sh* checks Mint jetty web-logs for NLA harvests.
 * *nla_unmatched.sh* will extract from Mint logs any person objects which are
   awaiting an NLA ID and send a list of the corresponding Mint record URLs
   to the specified email address.

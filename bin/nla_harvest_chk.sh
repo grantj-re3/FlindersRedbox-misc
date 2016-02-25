@@ -1,5 +1,4 @@
 #!/bin/sh
-# nla_harvest_chk.sh
 # Usage:  nla_harvest_chk.sh [--email|-e]
 #
 # Copyright (c) 2016, Flinders University, South Australia. All rights reserved.
