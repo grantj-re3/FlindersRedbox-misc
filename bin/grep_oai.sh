@@ -1,5 +1,4 @@
 #!/bin/bash
-# oai_grep.sh
 # Usage:  See usage_exit() below.
 #
 # Copyright (c) 2016, Flinders University, South Australia. All rights reserved.
