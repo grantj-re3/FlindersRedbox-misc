@@ -24,6 +24,11 @@ Read the INSTALL file.
 
 Features
 --------
+* *extractRedboxDois.rb* extracts summary info regarding ReDBox records
+  for which DOIs have been minted. The info is shown in a CSV-like format.
+* *extractRedboxDois_wrap.sh* shows "new" ReDBox DOIs - which were minted
+  since the last run of this script. The info can be optionally sent via
+  email.
 * *grep_oai.sh* greps web-server logs for ReDBox or Mint OAI-PMH requests.
 * *json_parse.sh* parses a JSON file (on RHEL).
 * *nla_harvest_chk.sh* checks Mint jetty web-logs for NLA harvests.
