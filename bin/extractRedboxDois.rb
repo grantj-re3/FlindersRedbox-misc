@@ -78,6 +78,8 @@ class RedboxDoiDataset
     @metadata[:doi] = self.class.get_field(obj_strings, "andsDoi")
     @metadata[:owner] = self.class.get_field(obj_strings, "owner")
     @metadata[:handle] = self.class.get_field(obj_strings, "handle").to_s.gsub(/\\/, "")
+
+    @metadata[:warn_test_doi] = @metadata[:doi].match(/^10\.5072\//) ? "WARNING: Test DOI-prefix" : ""
   end
 
   ############################################################################
@@ -114,6 +116,7 @@ class RedboxDoiDataset
   def self.csv_out_fields
   [
     :doi,
+    :warn_test_doi,
     :record_created,
     :package_type,
     :owner,

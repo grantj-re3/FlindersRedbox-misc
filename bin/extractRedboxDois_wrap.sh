@@ -77,7 +77,7 @@ head -1 "$FNAME_NOW" > "$FNAME_DIFF"		# CSV header line
   numLines=`wc -l < "$FNAME_DIFF"`
   [ "$will_email" -a "$numLines" -gt 1 ] && {
     awk '{printf " [%d] %s\n", NR-1, $0}' "$FNAME_DIFF" |
-      mailx -a "$FNAME_DIFF" -s "$MAIL_SUBJECT" "$MAIL_LIST"
+      mailx -a "$FNAME_DIFF" -s "$MAIL_SUBJECT" $MAIL_LIST
   }
 }
 exit 0
