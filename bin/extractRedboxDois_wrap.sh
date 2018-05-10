@@ -26,7 +26,7 @@ FNAME_PREV="$DEST_DIR/extractRedboxDois_prev.psv"	# Previous snapshot of records
 FNAME_DIFF="$DEST_DIR/extractRedboxDois_diff.psv"	# New/updated (difference) records
 
 DATE_STAMP=`date "+%F %T"`
-MAIL_SUBJECT="New DOIs added to ReDBox: $DATE_STAMP"
+MAIL_SUBJECT="New or updated ReDBox DOIs: $DATE_STAMP"
 MAIL_LIST="user@example.com"
 
 ##############################################################################
